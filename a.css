@@ -1,0 +1,15 @@
+.fab{
+   font-size: 50px;
+   padding: 40px;
+}
+.container{
+   display: flex;
+   justify-content: center;
+}
+li{
+   list-style: none;
+   border: 1px solid aqua;
+   margin: 3px;
+   padding: 5px;
+   border-radius: 5px;
+}
