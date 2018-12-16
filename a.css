@@ -13,3 +13,20 @@ li{
    padding: 5px;
    border-radius: 5px;
 }
+.popup{
+   border: 1px solid black;
+   width: 400px;
+   height: 300px;
+   margin: auto;
+   position: relative;
+}
+.ok-btn {
+   position: absolute;
+   right:25px;
+   bottom:25px;
+}
+.close-btn {
+   position: absolute;
+   right:0px;
+   top:0px;
+}

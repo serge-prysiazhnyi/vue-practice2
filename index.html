@@ -10,16 +10,27 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-       <div class="container">
+       <div id="app">
            <logo>
-                <img v-bind:src="url" alt="" slot="urlLogo" >
+                <img style="width: 64px" v-bind:src="url" alt="" slot="urlLogo" >
            </logo>
            <social
-           v-bind:roster="list">
-
+           v-bind:roster="list"
+           v-bind:on-socilal-click="onSocilalClick"
+           >
            </social>
+           <popup 
+           v-if="isPopUpShow" 
+           v-bind:on-ok="onOk" 
+           v-bind:close="close"
+           v-bind:list-open="listOpen"
+           >
+               <h1>{{ getSocial() }}</h1>
+               <ul v-for="item in list2" slot="ul">
+                    <li>{{item}}</li>
+               </ul>
+           </popup> 
        </div>
-
 <script src="./foo.js"></script>
 </body>
 </html>
